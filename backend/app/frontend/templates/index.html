@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second-Hand Shop – Voice Agent</title>
+</head>
+
+<body>
+<h1>Second-Hand Shop</h1>
+
+<h2>Add Product (Manual)</h2>
+<form id="add-product-form">
+    <input type="text" id="title" placeholder="Title" required>
+    <input type="text" id="model" placeholder="Model (optional)">
+    <input type="number" id="price" placeholder="Price" required>
+    <button type="submit">Add</button>
+</form>
+
+<hr>
+
+<h2>Voice Command</h2>
+<button id="start-record">🎙️ Start Recording</button>
+<button id="stop-record" disabled>⏹ Stop</button>
+
+<p id="recording-status"></p>
+<div id="voice-feedback" style="margin-top:10px; font-weight:bold;"></div>
+
+<hr>
+
+<h2>Products</h2>
+
+{% if products %}
+<ul>
+    {% for product in products %}
+    <li>
+        <strong>{{ product.title }}</strong>
+        {% if product.model %}
+            (Model: {{ product.model }})
+        {% endif %}
+        — €{{ product.price }}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No products available.</p>
+{% endif %}
+
+<!-- Load JavaScript -->
+<script src="/static/index.js"></script>
+</body>
+</html>

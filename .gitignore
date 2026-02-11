@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# SQLite database
+database.db
+
+# Uploaded audio files
+voice_uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node / frontend junk (future-proof)
+node_modules/
+
+# Temporary files
+tmp/
+venv/
+venv310/
+__pycache__/
+voice_uploads/
+*.wav
+*.webm
+tts_models/
+*.pt
+*.bin
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+venv310/
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Voice uploads
+voice_uploads/
+
+# Generated audio (TTS output)
+backend/app/frontend/static/audio/
+*.wav
+*.webm
+
+# ML / Whisper / TTS models
+*.pt
+*.bin
+*.ckpt
+*.onnx
+*.model
+tts_models/
+faster_whisper/
+models/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
